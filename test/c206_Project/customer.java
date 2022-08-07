@@ -12,6 +12,7 @@ package c206_Project;
  * @author 21033243
  *
  */
+
 public class customer {
 	//Fields 
 	private int id;

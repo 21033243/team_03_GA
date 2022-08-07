@@ -7,6 +7,7 @@ import java.util.regex.Pattern;
 
 public class Helper {
 
+	
 	@SuppressWarnings("resource")
 	public static String readString(String prompt) {
 		System.out.print(prompt);
