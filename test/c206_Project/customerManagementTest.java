@@ -53,7 +53,7 @@ class customerManagementTest {
 	}
 
 	@Test
-	public void testAddCamcorder() {
+	public void testAddCustomer() {
 		// Test if Customer list is not null, so that can add a new customer - boundary
 		assertNotNull("Test if there is valid Customer arraylist to add to", customerList);
 		
@@ -94,23 +94,6 @@ class customerManagementTest {
 		 
 	}
 	
-	@Test
-	public void testDoUpdateCustomer() {
-		
-		//boundary
-		assertNotNull("test if there is valid customer arraylist to update", customerList);
-		
-		customerManagement.addCustomer(customerList, c1);
-		
-		// normal
-		Boolean checkCustomer = customerManagement.doUpdateCustomer(customerList, 1001, 90024496, "jack@gmail.com" );
-		assertTrue("Test if an customer personal particulars in customer list is correctly stored", checkCustomer);
-
-		//error condition
-		checkCustomer = customerManagement.doUpdateCustomer(customerList, 1500, 12345678, "james@gmail.com" );
-		assertFalse("Test that non-existing customer is cannot be updated?", checkCustomer);
-		
-	}
 	
 	@Test
 	public void testdoDelete() {

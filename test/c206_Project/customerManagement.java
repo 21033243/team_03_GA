@@ -115,10 +115,11 @@ public class customerManagement {
 	}
 
 	public static customer inputCustomer() {
+	
 		int id = Helper.readInt("Enter id > ");
 		int mobile = Helper.readInt("Enter mobile > ");
 		String name = Helper.readString("Enter Name > ");
-		String email = Helper.readString("Enter email > ");
+		String email = Helper.readString("Enter email > ");		
 
 		customer cc= new customer (id, mobile, name,email);
 		return cc;
