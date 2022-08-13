@@ -6,7 +6,7 @@
  * Dany, 11 Aug 2022 5:50:33 pm
  */
 
-package c206ga;
+package c206_Project;
 
 /**
  * @author Dany 21035198

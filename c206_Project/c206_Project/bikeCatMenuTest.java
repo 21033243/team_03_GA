@@ -6,7 +6,7 @@
  * Dany, 13 Aug 2022 3:17:15 pm
  */
 
-package c206ga;
+package c206_Project;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -52,13 +52,13 @@ public class bikeCatMenuTest {
 		
 		// Given that the list is empty, after adding 1 bike, the size of the list becomes 1 - normal test
 		// Bike added is the same as the first bike of the list
-		bikeCatMenu.addBike(bikeList, b1);
+		customerManagement.addBike(bikeList, b1);
 		assertEquals("Test if the bike arraylist size is 1", 1, bikeList.size());
 		assertSame("Check that Bike is added", b1, bikeList.get(0));
 		
 		// add another bike, test if the size of the bikeList is 2 - normal test
 		// Bike added is same as second bike of the list
-		bikeCatMenu.addBike(bikeList, b2);
+		customerManagement.addBike(bikeList, b2);
 		assertEquals("Check that the bike arraylist size is 2", 2, bikeList.size());
 		assertSame("Check that bike is added", b2, bikeList.get(1));
 	}
