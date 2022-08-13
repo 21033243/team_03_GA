@@ -1,11 +1,11 @@
+package c206_Project;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-package c206ga;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -75,7 +75,7 @@ public class jUnitTestbikeCat {
 		assertNotNull("Test if there are valid bikes in the arraylist to retrieve bikes", bikeList);
 		
 		// test if the list of bikes retrieved is empty - boundary testing
-		String allBikes = customerManagement.retrieveAllBike(bikeList);
+		String allBikes = customerManagement.retrieveAllBikes(bikeList);
 		String testOutput = "";
 		assertEquals("Check that getBikeList is the same", testOutput, allBikes);
 		
@@ -84,10 +84,10 @@ public class jUnitTestbikeCat {
 		customerManagement.addBike(bikeList, b2);
 		assertEquals("Test that the bike arraylist size is 2", 2, bikeList.size());
 		
-		// test if the expected output string is the same as the lsit of bikes retrieved
-		allBikes = customerManagement.retrieveAllBike(bikeList);
-		testOutput += String.format("%-10d %-20s %-20s %-20s\n", 1001, "XSR155", "Yamaha", "150cc");
-		testOutput += String.format("10-d %-20s_%-20s %-20s\n", 1002, "CBR150", "Honda", "149cc");
+		// test if the expected output string is the same as the list of bikes retrieved
+		allBikes = customerManagement.retrieveAllBikes(bikeList);
+		testOutput += String.format("%-10d %-20s %-20s %-20s\n", 1001, "XSR155", "Yamaha", "155cc");
+		testOutput += String.format("%-10d %-20s %-20s %-20s\n", 1002, "CBR150", "Honda", "149cc");
 		
 		assertEquals("Test that the bikeList is valid", testOutput, allBikes);
 	}

@@ -302,13 +302,13 @@ public class customerManagement {
 		return output;
 	}
 
-	private static void getBikeList(ArrayList<bikeCategory> bikeList) {
+	public static void getBikeList(ArrayList<bikeCategory> bikeList) {
 		String output = String.format("%-10s %-20s %-20s %-20s\n", "bike id", "bike name", "bike brand", "bike power");
 		output += retrieveAllBikes(bikeList);
 		System.out.println(output);
 	}
 
-	private static bikeCategory inputBike() {
+	public static bikeCategory inputBike() {
 		int id = Helper.readInt("Enter ID > ");
 		String bikename = Helper.readString("Enter Bike Model > ");
 		String bikebrand = Helper.readString("Enter Bike Brand > ");
@@ -322,7 +322,7 @@ public class customerManagement {
 		bikeList.add(bc);
 	}
 
-	private static boolean doUpdateBike(ArrayList<bikeCategory> bikeList, int id, String bikeName, String bikeBrand,
+	public static boolean doUpdateBike(ArrayList<bikeCategory> bikeList, int id, String bikeName, String bikeBrand,
 			String bikePower) {
 
 		boolean isUpdated = false;
@@ -339,7 +339,7 @@ public class customerManagement {
 		return isUpdated;
 	}
 
-	private static boolean doDeleteBike(ArrayList<bikeCategory> bikeList, int id) {
+	public static boolean doDeleteBike(ArrayList<bikeCategory> bikeList, int id) {
 
 		for (int i = 0; i < bikeList.size(); i++) {
 			if (bikeList.get(i).getBikeid() == id) {

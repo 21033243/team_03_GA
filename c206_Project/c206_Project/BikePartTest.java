@@ -1,5 +1,3 @@
-
-
 /**
  * I declare that this code was written by me.
  * I will not copy or allow others to copy my code.
@@ -13,7 +11,7 @@
  *
  */
 
-package c206_GA_Bikes;
+package c206_Project;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -28,10 +26,6 @@ import static org.junit.Assert.assertTrue;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-
-
-
 
 class BikePartTest {
 
@@ -54,7 +48,8 @@ class BikePartTest {
 	@AfterEach
 	void tearDown() throws Exception {
 	}
-
+	
+	@Test
 	public void testAddBikeParts() {
 	
 	// Test if the Bike Part List is not null, so we are able to add a new bike part - boundary test
@@ -63,21 +58,18 @@ class BikePartTest {
 	// Given that the list is empty, after adding 1 bike part, the size of the list becomes 1 - normal test
 	// Bike added is the same as the first bike part of the list
 	
-	customerManagement.addBike(BikePartsList, BP1);
+	customerManagement.addBikeParts(BikePartsList, BP1);
 	assertEquals("Test if the bike arraylist size is 1", 1, BikePartsList.size());
 	assertSame("Check that Bike is added", BP1, BikePartsList.get(0));
 	
 	// add another bike part, test if the size of the BikePartList is 2 - normal test
 	// Bike added is same as second bike of the list
 	
-	customerManagement.addBike(BikePartsList, BP2);
+	customerManagement.addBikeParts(BikePartsList, BP2);
 	assertEquals("Check that the bike arraylist size is 2", 2, BikePartsList.size());
 	assertSame("Check that bike is added", BP2, BikePartsList.get(1));
 	
 	}
-	@Test
-	void test() {
-		fail("Not yet implemented");
-	}
+
 
 }
