@@ -97,7 +97,7 @@ public class jUnitTestbikeCat {
 		
 		assertNotNull("test that there is a valid bike arraylist to delete", bikeList);
 		
-		customerManagementTest.addBike(bikeList, b1);
+		customerManagement.addBike(bikeList, b1);
 		
 		
 		Boolean checkBike = customerManagement.doDeleteBike(bikeList, 1001);
