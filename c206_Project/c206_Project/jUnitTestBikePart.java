@@ -27,7 +27,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class BikePartTest {
+class jUnitTestBikePart {
 
 	private BikeParts BP1;
 	private BikeParts BP2;
@@ -88,8 +88,8 @@ class BikePartTest {
 		
 		// test if the expected output string is the same as the list of bike Parts retrieved
 		allBikeParts = customerManagement.RetreiveBikeParts(BikePartsList);
-		testOutput += String.format("%-10d %-20s %-20d\n",001,"Bike Seat",10);
-		testOutput += String.format("%-10d %-20s %-20d\n",002,"Bike Helmet",10);
+		testOutput += String.format("%-10d %-35s %-30d\n",001,"Bike Seat",10);
+		testOutput += String.format("%-10d %-35s %-30d\n",002,"Bike Helmet",10);
 		
 		assertEquals("Test that the bikePartList is valid", testOutput, allBikeParts);
 	}
