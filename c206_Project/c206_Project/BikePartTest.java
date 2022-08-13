@@ -70,6 +70,54 @@ class BikePartTest {
 	assertSame("Check that bike is added", BP2, BikePartsList.get(1));
 	
 	}
-
-
+	@Test
+	public void testRetrieveBikeParts() {
+		
+		// test that the bike part list is not null but empty - boundary testing
+		assertNotNull("Test if there are valid bikes in the arraylist to retrieve bikes", BikePartsList);	
+		
+		// test if the list of bike parts retrieved is empty - boundary testing
+		String allBikeParts = customerManagement.RetreiveBikeParts(BikePartsList);
+		String testOutput = "";
+		assertEquals("Check that getBikePartsList is the same", testOutput, allBikeParts);
+		
+		// Given an empty bike part list, after adding 2 bike Parts, test that the size of the bike part list is 2 - normal test
+		customerManagement.addBikeParts(BikePartsList, BP1);
+		customerManagement.addBikeParts(BikePartsList, BP2);
+		assertEquals("Test that the BikeParts arraylist size is 2", 2, BikePartsList.size());
+		
+		// test if the expected output string is the same as the list of bike Parts retrieved
+		allBikeParts = customerManagement.RetreiveBikeParts(BikePartsList);
+		testOutput += String.format("%-10d %-20s %-20d\n",001,"Bike Seat",10);
+		testOutput += String.format("%-10d %-20s %-20d\n",002,"Bike Helmet",10);
+		
+		assertEquals("Test that the bikePartList is valid", testOutput, allBikeParts);
+	}
+	
+	@Test 
+	public void testDeleteBikeParts() {
+		assertNotNull("test that there is a valid bike arraylist to delete", BikePartsList);
+		
+		customerManagement.addBikeParts(BikePartsList, BP1);
+		
+		Boolean checkBikePart = customerManagement.DeleteBikeParts(BikePartsList, 001 );
+		assertTrue("Test if a bike in bikeList can be successfully removed", checkBikePart);
+		
+		checkBikePart = customerManagement.DeleteBikeParts(BikePartsList, 002 );
+		assertFalse("Test that a bike that is not in the arraylist cannot be deleted", checkBikePart);
+	}
+	
+	@Test 
+	public void testUpdateBikeParts() {
+		
+		assertNotNull("test if there is a valid bike arraylist to update", BikePartsList);
+		
+		customerManagement.addBikeParts(BikePartsList, BP1);
+		
+		Boolean checkBikePart = customerManagement.UpdateBikeParts(BikePartsList,001,"Bike Seat",10);
+		assertTrue("Test if bike details in bikelist is correctly stored", checkBikePart);
+		
+		checkBikePart = customerManagement.UpdateBikeParts(BikePartsList,002,"Bike Helmet",10);
+		assertFalse("Test that a bike that does not exist cannot be updated", checkBikePart);
+	}
 }
