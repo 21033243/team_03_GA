@@ -13,7 +13,7 @@
  *
  */
 
-package c206_GA_Bikes;
+package c206_Project;
 
 public class BikeParts {
 	
@@ -29,7 +29,6 @@ public class BikeParts {
 		this.id = id;
 		this.partName = partName;
 		this.quantity = quantity;
-		
 		
 	}
 	
